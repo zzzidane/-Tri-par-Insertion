@@ -1,0 +1,24 @@
+// Variables :
+arr : tableau d'entier
+n : entier // la taille du tableau
+i : entier // identifiant pour la boucle principale
+j : eniter // identifiant pour la boucle de comparaison
+eleInserer : eniter
+
+Début
+    n := longueur(arr)
+
+    Pour i allant de 1 à n-1 faire
+        eleInserer := arr[i]
+        j := i - 1
+
+        Tant que j >= 0 Et arr[j] > eleInserer faire
+            arr[j+1] := arr[j]
+            j := j - 1
+        Fin Tant que
+
+        arr[j+1] := eleInserer
+    Fin Pour
+    
+    Afficher "tableau trié :", arr
+Fin
